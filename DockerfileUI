@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 COPY agency-management-ui/package.json ./
 COPY agency-management-ui/package-lock.json ./
 RUN npm install
-COPY . .
+COPY agency-management-ui/. .
 RUN npm run build
 
 FROM nginx:1.17.1-alpine

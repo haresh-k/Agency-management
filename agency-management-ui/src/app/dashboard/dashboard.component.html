@@ -1,0 +1,8 @@
+<h2>Top Agencies</h2>
+<div class="agencies-menu">
+  <a *ngFor="let agency of agencies"
+     routerLink="/detail/{{agency.id}}">
+    {{agency.name}}
+  </a>
+</div>
+<app-agency-search></app-agency-search>

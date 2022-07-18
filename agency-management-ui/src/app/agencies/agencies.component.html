@@ -1,0 +1,19 @@
+<h2>My Agencies</h2>
+<div>
+  <label for="new-agency">Agency name: </label>
+  <input id="new-agency" placeholder="Add agency name here"#agencyName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(agencyName.value); agencyName.value=''">
+    Add agency
+  </button>
+</div>
+<ul class="agencies">
+  <li *ngFor="let agency of agencies">
+    <a routerLink="/detail/{{agency.id}}">
+      <span class="badgse">{{agency.name}}</span>
+    </a>
+    <button type="button" class="delete" title="delete agency"
+            (click)="delete(agency)">x</button>
+  </li>
+</ul>

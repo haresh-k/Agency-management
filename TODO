@@ -1,4 +1,3 @@
-Add front end using Angular
 Move docker image building to the gradle script - can avoid multiple execution cmds
 Good to have: Loggers, Swagger docs
 Add postman collection for the APIs to repo

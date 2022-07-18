@@ -1,0 +1,17 @@
+<div *ngIf="agency">
+
+  <h2>{{agency.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{agency.id}}</div>
+  <div>
+    <label for="agency-name">Agency : </label><br>
+    <input id="agency-name" [(ngModel)]="agency.name" placeholder="name"><br>
+    <input id="agency-country" [(ngModel)]="agency.country" placeholder="country"><br>
+    <input id="agency-country-code" [(ngModel)]="agency.countryCode" placeholder="country code"><br>
+    <input id="agency-city" [(ngModel)]="agency.city" placeholder="city"><br>
+    <input id="agency-street" [(ngModel)]="agency.street" placeholder="street"><br>
+    <input id="agency-settlement-currency" [(ngModel)]="agency.settlementCurrency" placeholder="settlement currency"><br>
+    <input id="agency-contact-person" [(ngModel)]="agency.contactPerson" placeholder="contact person"><br>
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
+</div>
